@@ -37,6 +37,14 @@ public class ListNeighbourActivity extends AppCompatActivity {
         mViewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(mTabLayout));
         mTabLayout.addOnTabSelectedListener(new TabLayout.ViewPagerOnTabSelectedListener(mViewPager));
 
+        //mNeighbours.setOnClickListener(new View.OnClickListener()) {
+        //    @Override
+        //    public void onClick(View v) {
+        //    Intent profileActivityIntent = new Intent(this, ProfileActivity.class);
+        //    startActivity(profileActivityIntent);
+        //    }
+        //}
+
     }
 
     @OnClick(R.id.add_neighbour)

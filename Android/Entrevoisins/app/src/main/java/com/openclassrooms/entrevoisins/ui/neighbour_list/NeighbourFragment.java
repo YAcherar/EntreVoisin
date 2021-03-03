@@ -42,14 +42,6 @@ public class NeighbourFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mApiService = DI.getNeighbourApiService();
-
-        //mNeighbours.setOnClickListener(new View.OnClickListener()) {
-        //    @Override
-        //    public void onClick(View v) {
-        //    Intent profileActivityIntent = new Intent(this, ProfileActivity.class);
-        //    startActivity(profileActivityIntent);
-        //    }
-        //}
     }
 
     @Override
