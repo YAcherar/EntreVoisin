@@ -31,12 +31,14 @@
         android:textSize="30sp"
         android:textStyle="bold"/>
 
-    <ImageButton
+    <android.support.design.widget.FloatingActionButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_star_yellow_24dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="@id/guideline"/>
+        android:layout_marginEnd="15dp"
+        app:rippleColor="@android:color/black"
+        app:layout_constraintTop_toTopOf="@id/guideline"/>
 
 
     <TextView
