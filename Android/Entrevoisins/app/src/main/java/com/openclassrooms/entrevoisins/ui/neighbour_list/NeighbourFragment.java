@@ -1,6 +1,7 @@
 package com.openclassrooms.entrevoisins.ui.neighbour_list;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.DividerItemDecoration;
@@ -11,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.openclassrooms.entrevoisins.R;
+import com.openclassrooms.entrevoisins.controller.ProfileActivity;
 import com.openclassrooms.entrevoisins.di.DI;
 import com.openclassrooms.entrevoisins.events.DeleteNeighbourEvent;
 import com.openclassrooms.entrevoisins.events.DetailNeighbourEvent;
@@ -94,6 +96,9 @@ public class NeighbourFragment extends Fragment {
 
     @Subscribe
     public void onDetailNeighbour(DetailNeighbourEvent event) {
+        Intent profileActivityIntent = new Intent( getActivity(), ProfileActivity.class);
+        //profileActivityIntent.putExtra()
+        startActivity(profileActivityIntent);
     }
 
 }

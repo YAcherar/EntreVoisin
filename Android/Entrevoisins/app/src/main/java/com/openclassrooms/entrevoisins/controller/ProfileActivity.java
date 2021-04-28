@@ -31,4 +31,5 @@ public class ProfileActivity extends AppCompatActivity {
         mAboutMeTextView1 = (TextView) findViewById(R.id.aboutMe_TextView1);
         mAboutMeTextView2 = (TextView) findViewById(R.id.aboutMe_TextView2);
     }
+
 }
