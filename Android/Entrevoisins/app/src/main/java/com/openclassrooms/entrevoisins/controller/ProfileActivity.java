@@ -22,6 +22,8 @@ public class ProfileActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
 
+        getIntent().getSerializableExtra("neighbour");
+
         // Wire widgets
         mAvatarImageView = (ImageView) findViewById(R.id.avatar_ImageView);
         mNameTextView = (TextView) findViewById(R.id.name_TextView);

@@ -97,7 +97,7 @@ public class NeighbourFragment extends Fragment {
     @Subscribe
     public void onDetailNeighbour(DetailNeighbourEvent event) {
         Intent profileActivityIntent = new Intent( getActivity(), ProfileActivity.class);
-        //profileActivityIntent.putExtra()
+        profileActivityIntent.putExtra("neighbour", ProfileActivity.class);
         startActivity(profileActivityIntent);
     }
 
