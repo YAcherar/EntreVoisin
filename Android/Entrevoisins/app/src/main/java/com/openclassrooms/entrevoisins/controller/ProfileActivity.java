@@ -2,10 +2,14 @@ package com.openclassrooms.entrevoisins.controller;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.openclassrooms.entrevoisins.R;
+import com.openclassrooms.entrevoisins.model.Neighbour;
+
+import static android.util.Log.*;
 
 public class ProfileActivity extends AppCompatActivity {
 
@@ -17,12 +21,15 @@ public class ProfileActivity extends AppCompatActivity {
     private TextView mAboutMeTextView1;
     private TextView mAboutMeTextView2;
 
+    private static final String TAG = "ProfileActivity";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
 
-        getIntent().getSerializableExtra("neighbour");
+        Neighbour test = (Neighbour) getIntent().getSerializableExtra("neighbour");
+        Log.d(TAG, test.getName());
 
         // Wire widgets
         mAvatarImageView = (ImageView) findViewById(R.id.avatar_ImageView);
