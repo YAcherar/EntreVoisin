@@ -1,11 +1,11 @@
 package com.openclassrooms.entrevoisins.controller;
 
+import android.graphics.BitmapFactory;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.openclassrooms.entrevoisins.R;
 import com.openclassrooms.entrevoisins.model.Neighbour;
@@ -20,8 +20,7 @@ public class ProfileActivity extends AppCompatActivity {
     private TextView mAddressTextView;
     private TextView mNumberTextView;
     private TextView mLinkTextView;
-    private TextView mAboutMeTextView1;
-    private TextView mAboutMeTextView2;
+    private TextView mAboutMeTextView;
 
     private static final String TAG = "ProfileActivity";
 
@@ -43,15 +42,15 @@ public class ProfileActivity extends AppCompatActivity {
         mAddressTextView = (TextView) findViewById(R.id.address_TextView);
         mNumberTextView = (TextView) findViewById(R.id.phoneNumber_TextView);
         mLinkTextView = (TextView) findViewById(R.id.link_TextView);
-        mAboutMeTextView1 = (TextView) findViewById(R.id.aboutMe_TextView1);
-        mAboutMeTextView2 = (TextView) findViewById(R.id.aboutMe_TextView2);
+        mAboutMeTextView = (TextView) findViewById(R.id.aboutMe_TextView);
 
         mnameview.setText(neighbour.getName());
+        mNameTextView.setText(neighbour.getName());
+        mAddressTextView.setText(neighbour.getAddress());
+        mNumberTextView.setText(neighbour.getPhoneNumber());
+        mAboutMeTextView.setText(neighbour.getAboutMe());
 
 
-
-
-        Toast.makeText(ProfileActivity.this, neighbour.getName(), Toast.LENGTH_SHORT).show();
     }
 
 }

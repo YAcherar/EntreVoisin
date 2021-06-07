@@ -1,5 +1,7 @@
 package com.openclassrooms.entrevoisins.model;
 
+import android.graphics.Bitmap;
+
 import java.io.Serializable;
 import java.util.Objects;
 
@@ -102,4 +104,5 @@ public class Neighbour implements Serializable {
     public int hashCode() {
         return Objects.hash(id);
     }
+
 }
