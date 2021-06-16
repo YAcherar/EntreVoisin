@@ -1,12 +1,15 @@
 package com.openclassrooms.entrevoisins.controller;
 
 import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 import com.openclassrooms.entrevoisins.R;
 import com.openclassrooms.entrevoisins.model.Neighbour;
 
@@ -46,9 +49,14 @@ public class ProfileActivity extends AppCompatActivity {
 
         mnameview.setText(neighbour.getName());
         mNameTextView.setText(neighbour.getName());
+        Glide.with(this)
+                .load(neighbour.getAvatarUrl())
+                .into(mAvatarImageView);
         mAddressTextView.setText(neighbour.getAddress());
         mNumberTextView.setText(neighbour.getPhoneNumber());
         mAboutMeTextView.setText(neighbour.getAboutMe());
+
+
 
 
     }
