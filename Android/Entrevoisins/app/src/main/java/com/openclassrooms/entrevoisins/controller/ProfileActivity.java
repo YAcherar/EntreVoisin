@@ -5,6 +5,7 @@ import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -36,6 +37,8 @@ public class ProfileActivity extends AppCompatActivity {
         d(TAG, neighbour.getName());
         d(TAG, neighbour.getAboutMe());
 
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
 
 
         // Wire widgets
@@ -56,9 +59,16 @@ public class ProfileActivity extends AppCompatActivity {
         mNumberTextView.setText(neighbour.getPhoneNumber());
         mAboutMeTextView.setText(neighbour.getAboutMe());
 
+    }
 
-
-
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home : {
+                finish();
+                return true;
+            }
+        }
+        return super.onOptionsItemSelected(item);
     }
 
 }
