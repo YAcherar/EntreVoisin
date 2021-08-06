@@ -2,6 +2,7 @@ package com.openclassrooms.entrevoisins.controller;
 
 import android.graphics.BitmapFactory;
 import android.net.Uri;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -25,6 +26,7 @@ public class ProfileActivity extends AppCompatActivity {
     private TextView mNumberTextView;
     private TextView mLinkTextView;
     private TextView mAboutMeTextView;
+    private FloatingActionButton mstar
 
     private static final String TAG = "ProfileActivity";
 
@@ -49,6 +51,7 @@ public class ProfileActivity extends AppCompatActivity {
         mNumberTextView = (TextView) findViewById(R.id.phoneNumber_TextView);
         mLinkTextView = (TextView) findViewById(R.id.link_TextView);
         mAboutMeTextView = (TextView) findViewById(R.id.aboutMe_TextView);
+        mstar = (FloatingActionButton) findViewById(R.id.star);
 
         mnameview.setText(neighbour.getName());
         mNameTextView.setText(neighbour.getName());
@@ -58,6 +61,8 @@ public class ProfileActivity extends AppCompatActivity {
         mAddressTextView.setText(neighbour.getAddress());
         mNumberTextView.setText(neighbour.getPhoneNumber());
         mAboutMeTextView.setText(neighbour.getAboutMe());
+
+        mstar.setOnClickListener();
 
     }
 
