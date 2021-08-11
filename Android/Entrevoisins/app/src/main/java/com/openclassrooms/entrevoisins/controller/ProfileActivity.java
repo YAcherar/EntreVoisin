@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -26,7 +27,7 @@ public class ProfileActivity extends AppCompatActivity {
     private TextView mNumberTextView;
     private TextView mLinkTextView;
     private TextView mAboutMeTextView;
-    private FloatingActionButton mstar
+    private FloatingActionButton mstar;
 
     private static final String TAG = "ProfileActivity";
 
@@ -62,7 +63,12 @@ public class ProfileActivity extends AppCompatActivity {
         mNumberTextView.setText(neighbour.getPhoneNumber());
         mAboutMeTextView.setText(neighbour.getAboutMe());
 
-        mstar.setOnClickListener();
+        mstar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mstar.setImageResource(R.drawable.ic_star_yellow_24dp);
+            }
+        });
 
     }
 
